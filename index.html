@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DuckNova Search</title>
+<style>
+body{margin:0;font-family:Segoe UI,Arial;background:#0b1020;color:white;display:flex;justify-content:center;align-items:center;height:100vh}
+.card{width:min(900px,92%);text-align:center}
+input{width:75%;padding:18px;border-radius:16px;border:none;font-size:18px}
+button{padding:18px 28px;border:none;border-radius:16px;background:#2563eb;color:white;font-size:18px;cursor:pointer}
+.small{opacity:.7;margin-top:15px}
+</style></head>
+<body><div class="card"><h1>DuckNova Search</h1><p>Your custom search front end powered by DuckDuckGo.</p><input id="q" placeholder="Search the web..."> <button onclick="go()">Search</button><div class="small">Host on GitHub + Vercel</div></div>
+<script>
+function go(){const q=document.getElementById('q').value.trim();if(q) window.location.href='https://duckduckgo.com/?q='+encodeURIComponent(q)}
+document.getElementById('q').addEventListener('keydown',e=>{if(e.key==='Enter')go();});
+</script></body></html>
